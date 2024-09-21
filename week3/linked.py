@@ -40,7 +40,12 @@ class LinkedList:
         self.len+=1
 
     def insert(self, data, i):
+      if i==self.len:
+         new_node=Node(data, None)
+         self.tail.next = new_node
+         self.tail = self.tail.next
       self.len+=1
+      
       head = self.head
       prev = None
       index = 0
@@ -133,6 +138,8 @@ if __name__ == "__main__":
     L = LinkedList()
     for num in (3, 5, 2, 7, 8, 10, 6):
         L.append(num)
+    L.insert(11,7)
+    L.append(20)
     L.print()
-    L.isort()
-    L.print()
+    # L.isort()
+    # L.print()
