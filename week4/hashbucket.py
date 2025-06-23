@@ -9,7 +9,7 @@ class HashBucket:
     def hash(self,data):
         sum =0
         for c in data:
-            sum+= ord(c)
+            sum+= ord(c)    
         return sum%self.M
 
     def print(self):
@@ -83,3 +83,5 @@ if __name__ == "__main__":
     table.delete("kiwi")
     table.delete("peach")
     table.print()
+
+
